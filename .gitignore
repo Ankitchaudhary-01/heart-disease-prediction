@@ -1,0 +1,31 @@
+# Environments & Dependencies
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS Specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Logs & Databases & Temporary Files
+*.log
+*.tmp
+*.db
+*.sqlite
+*.sqlite3
