@@ -185,41 +185,53 @@ Open the local URL displayed in the terminal to use the application.
 ## 💻 Usage Guide
 
 ### 1. Launching the Interactive Web Application
-Run the Streamlit application to access the interactive clinical interface:
+
+First, activate your virtual environment.
+
+**macOS / Linux**
+
 ```bash
-.venv/bin/streamlit run app.py
+source .venv/bin/activate
 ```
-Open `http://localhost:8501` in your browser. The app features:
-- **Patient Risk Assessment**: Real-time interactive sliders with instant risk score, probability gauge, detected clinical risk flags, and lifestyle recommendations.
-- **Batch Cohort Screening**: Upload CSV files for instant multi-patient risk stratification and downloadable reports.
-- **Model Benchmarks**: Full interactive ROC curves, confusion matrices, and feature importance inspection.
-- **Clinical Guide & EDA**: Correlation heatmaps and medical feature dictionaries.
+**Windows**
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies if you haven't already:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+Open `http://localhost:8501` in your browser.
+
+The application includes:
+
+* **Patient Risk Assessment:** Interactive patient inputs and risk predictions.
+* **Batch Cohort Screening:** CSV-based batch predictions and reports.
+* **Model Benchmarks:** Model evaluation metrics and visualizations.
+* **Clinical Guide & EDA:** Exploratory data analysis and feature information.
 
 ### 2. Command-Line Inference
-Run quick single-patient prediction:
+
+With the virtual environment activated, run:
+
 ```bash
-.venv/bin/python -m src.predict
-```
-
-Example Python snippet:
-```python
-from src.predict import HeartDiseasePredictor
-
-predictor = HeartDiseasePredictor()
-patient_data = {
-    "age": 63, "sex": 1, "cp": 0, "trestbps": 145, "chol": 233,
-    "fbs": 1, "restecg": 0, "thalach": 150, "exang": 0,
-    "oldpeak": 2.3, "slope": 0, "ca": 1, "thal": 3
-}
-
-result = predictor.predict_single(patient_data)
-print(result["diagnosis"])             # Heart Disease Indicated
-print(result["probability_percentage"])# 87.3%
-print(result["risk_tier"])             # High Risk
+python -m src.predict
 ```
 
 ### 3. Batch Cohort Screening
-Process any CSV dataset matching the 13 feature columns:
+
+Run the following Python code from the project root:
+
 ```python
 import pandas as pd
 from src.predict import HeartDiseasePredictor
@@ -231,13 +243,16 @@ results_df.to_csv("screened_cohort.csv", index=False)
 ```
 
 ### 4. Re-training Models
-To retrain and re-evaluate the full benchmark suite:
+
+With the virtual environment activated, run:
+
 ```bash
-.venv/bin/python -m src.train
-.venv/bin/python -m src.evaluate
+python -m src.train
+python -m src.evaluate
 ```
 
----
+**Note:** Model training and evaluation may take time depending on your hardware and dataset.
+
 
 ## 🧪 Automated Testing
 
