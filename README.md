@@ -135,16 +135,50 @@ The model is grounded in the canonical **Cleveland Clinic Heart Disease** databa
 - macOS / Linux / Windows
 
 ### Setup Environment
+
+**Prerequisites**
+
+* Python 3.10 or later
+* Git
+
+**1. Clone the repository**
+
 ```bash
-# Navigate to project directory
-cd /Users/histoi/.gemini/antigravity/scratch/heart_disease_prediction
-
-# Activate virtual environment
-source .venv/bin/activate
-
-# Dependencies are already installed in .venv, or install via:
-pip install -r requirements.txt
+git clone https://github.com/Ankitchaudhary-01/heart-disease-prediction.git
+cd heart-disease-prediction
 ```
+
+**2. Create and activate a virtual environment**
+
+macOS / Linux:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Windows:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**3. Install dependencies**
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+**4. Run the application**
+
+```bash
+streamlit run app.py
+```
+
+Open the local URL displayed in the terminal to use the application.
+
 
 ---
 
