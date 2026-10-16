@@ -1,4 +1,4 @@
-# ❤️ CardioPredict AI — Heart Disease Risk Prediction & Clinical Decision Support System
+# CardioPredict AI — Heart Disease Risk Prediction & Clinical Decision Support System
 
 [![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://python.org)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.9.1-orange.svg)](https://scikit-learn.org)
@@ -11,7 +11,7 @@ Developed adhering to strict **Machine Learning Best Practices** (strict featuri
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 - [Project Architecture](#-project-architecture)
 - [Clinical Dataset & Features](#-clinical-dataset--features)
 - [Machine Learning Methodology](#-machine-learning-methodology)
@@ -28,7 +28,7 @@ Developed adhering to strict **Machine Learning Best Practices** (strict featuri
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
 heart_disease_prediction/
@@ -67,7 +67,7 @@ heart_disease_prediction/
 
 ---
 
-## 🧬 Clinical Dataset & Features
+##  Clinical Dataset & Features
 
 The model is grounded in the canonical **Cleveland Clinic Heart Disease** database (303 patients, 13 clinical predictors):
 
@@ -90,7 +90,7 @@ The model is grounded in the canonical **Cleveland Clinic Heart Disease** databa
 
 ---
 
-## 🔬 Machine Learning Methodology
+##  Machine Learning Methodology
 
 1. **Data Hygiene & Domain Validation**:
    - Dropped duplicate records to prevent data contamination across train and test folds.
@@ -111,7 +111,7 @@ The model is grounded in the canonical **Cleveland Clinic Heart Disease** databa
 
 ---
 
-## 📊 Model Comparison & Benchmark Results
+## Model Comparison & Benchmark Results
 
 ### 5-Fold Stratified Cross-Validation & Test Cohort Evaluation:
 
@@ -128,7 +128,7 @@ The model is grounded in the canonical **Cleveland Clinic Heart Disease** databa
 
 ---
 
-## 🚀 Installation & Quickstart
+## Installation & Quickstart
 
 ### Prerequisites
 - Python 3.10+ (Tested on Python 3.14)
@@ -182,7 +182,7 @@ Open the local URL displayed in the terminal to use the application.
 
 ---
 
-## 💻 Usage Guide
+## Usage Guide
 
 ### 1. Launching the Interactive Web Application
 
@@ -267,7 +267,7 @@ All unit tests passed successfully!
 
 ---
 
-## 👥 Demographic Fairness & Slice Analysis
+##  Demographic Fairness & Slice Analysis
 
 Model evaluation across subpopulations on the held-out test cohort:
 
@@ -282,6 +282,6 @@ The higher false positive rate observed in older cohorts reflects the higher bas
 
 ---
 
-## ⚕️ Clinical Decision Support & Disclaimer
+##  Clinical Decision Support & Disclaimer
 
 This software is an AI research prototype and is **not an FDA-cleared diagnostic medical device**. Outputs are intended for educational and decision-support exploration by healthcare practitioners. All clinical decisions must be confirmed by formal cardiological consultation, laboratory diagnostics, and physician review.
